@@ -1,0 +1,123 @@
+log4j:WARN No appenders could be found for logger (com.datastax.driver.core.Cluster).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+
+
+Thread Id39 :handling Transactions:200, Total Time : 15.734sec, Average Time per Transactions : 12.71132579128003, Average Time : 0.07867
+
+
+Thread Id37 :handling Transactions:204, Total Time : 16.248sec, Average Time per Transactions : 12.555391432791728, Average Time : 0.07964705882352942
+
+
+Thread Id28 :handling Transactions:241, Total Time : 18.099sec, Average Time per Transactions : 13.315652798497155, Average Time : 0.07509958506224067
+
+
+Thread Id38 :handling Transactions:199, Total Time : 18.127sec, Average Time per Transactions : 10.978098968389695, Average Time : 0.09109045226130652
+
+
+Thread Id26 :handling Transactions:226, Total Time : 18.246sec, Average Time per Transactions : 12.386276444152143, Average Time : 0.08073451327433628
+
+
+Thread Id34 :handling Transactions:238, Total Time : 18.967sec, Average Time per Transactions : 12.548109875046134, Average Time : 0.07969327731092436
+
+
+Thread Id0 :handling Transactions:220, Total Time : 19.134sec, Average Time per Transactions : 11.497857217518552, Average Time : 0.08697272727272727
+
+
+Thread Id14 :handling Transactions:217, Total Time : 19.193sec, Average Time per Transactions : 11.306205387380816, Average Time : 0.08844700460829494
+
+
+Thread Id6 :handling Transactions:224, Total Time : 19.456sec, Average Time per Transactions : 11.513157894736842, Average Time : 0.08685714285714285
+
+
+Thread Id13 :handling Transactions:212, Total Time : 19.628sec, Average Time per Transactions : 10.800896678214794, Average Time : 0.09258490566037736
+
+
+Thread Id33 :handling Transactions:241, Total Time : 19.638sec, Average Time per Transactions : 12.272125471025563, Average Time : 0.08148547717842325
+
+
+Thread Id35 :handling Transactions:234, Total Time : 19.78sec, Average Time per Transactions : 11.830131445904954, Average Time : 0.08452991452991454
+
+
+Thread Id27 :handling Transactions:233, Total Time : 20.106sec, Average Time per Transactions : 11.588580523226897, Average Time : 0.08629184549356224
+
+
+Thread Id31 :handling Transactions:234, Total Time : 20.267sec, Average Time per Transactions : 11.545862732520847, Average Time : 0.08661111111111111
+
+
+Thread Id12 :handling Transactions:225, Total Time : 20.333sec, Average Time per Transactions : 11.065755176314367, Average Time : 0.09036888888888889
+
+
+Thread Id8 :handling Transactions:218, Total Time : 20.409sec, Average Time per Transactions : 10.681562055955707, Average Time : 0.09361926605504586
+
+
+Thread Id36 :handling Transactions:233, Total Time : 20.513sec, Average Time per Transactions : 11.358650611807146, Average Time : 0.08803862660944206
+
+
+Thread Id23 :handling Transactions:228, Total Time : 20.569sec, Average Time per Transactions : 11.084641936895329, Average Time : 0.09021491228070175
+
+
+Thread Id30 :handling Transactions:232, Total Time : 20.618sec, Average Time per Transactions : 11.25230381220293, Average Time : 0.0888706896551724
+
+
+Thread Id17 :handling Transactions:217, Total Time : 20.924sec, Average Time per Transactions : 10.370865991206271, Average Time : 0.09642396313364054
+
+
+Thread Id16 :handling Transactions:224, Total Time : 20.998sec, Average Time per Transactions : 10.667682636441565, Average Time : 0.09374107142857144
+
+
+Thread Id22 :handling Transactions:221, Total Time : 21.2sec, Average Time per Transactions : 10.424528301886793, Average Time : 0.09592760180995474
+
+
+Thread Id29 :handling Transactions:246, Total Time : 21.174sec, Average Time per Transactions : 11.618022102578635, Average Time : 0.08607317073170731
+
+
+Thread Id19 :handling Transactions:236, Total Time : 21.235sec, Average Time per Transactions : 11.113727336943725, Average Time : 0.08997881355932204
+
+
+Thread Id7 :handling Transactions:225, Total Time : 21.328sec, Average Time per Transactions : 10.549512378094525, Average Time : 0.0947911111111111
+
+
+Thread Id32 :handling Transactions:248, Total Time : 21.294sec, Average Time per Transactions : 11.646473184934724, Average Time : 0.08586290322580645
+
+
+Thread Id18 :handling Transactions:223, Total Time : 21.417sec, Average Time per Transactions : 10.412289302890226, Average Time : 0.09604035874439462
+
+
+Thread Id25 :handling Transactions:242, Total Time : 21.492sec, Average Time per Transactions : 11.260003722315279, Average Time : 0.0888099173553719
+
+
+Thread Id20 :handling Transactions:221, Total Time : 21.727sec, Average Time per Transactions : 10.171675795093662, Average Time : 0.09831221719457013
+
+
+Thread Id24 :handling Transactions:223, Total Time : 21.773sec, Average Time per Transactions : 10.242042897166215, Average Time : 0.09763677130044843
+
+
+Thread Id21 :handling Transactions:223, Total Time : 22.001sec, Average Time per Transactions : 10.135902913503932, Average Time : 0.09865919282511211
+
+
+Thread Id1 :handling Transactions:216, Total Time : 22.134sec, Average Time per Transactions : 9.758742206560044, Average Time : 0.10247222222222223
+
+
+Thread Id2 :handling Transactions:219, Total Time : 22.142sec, Average Time per Transactions : 9.890705446662452, Average Time : 0.10110502283105023
+
+
+Thread Id4 :handling Transactions:217, Total Time : 22.842sec, Average Time per Transactions : 9.50004377900359, Average Time : 0.1052626728110599
+
+
+Thread Id3 :handling Transactions:219, Total Time : 22.985sec, Average Time per Transactions : 9.527953012834457, Average Time : 0.10495433789954338
+
+
+Thread Id15 :handling Transactions:234, Total Time : 23.581sec, Average Time per Transactions : 9.923243289088674, Average Time : 0.10077350427350427
+
+
+Thread Id10 :handling Transactions:237, Total Time : 25.243sec, Average Time per Transactions : 9.38874143326863, Average Time : 0.10651054852320674
+
+
+Thread Id5 :handling Transactions:228, Total Time : 25.249sec, Average Time per Transactions : 9.030060596459267, Average Time : 0.11074122807017543
+
+
+Thread Id11 :handling Transactions:210, Total Time : 25.307sec, Average Time per Transactions : 8.29809934010353, Average Time : 0.1205095238095238
+
+
+Thread Id9 :handling Transactions:219, Total Time : 26.613sec, Average Time per Transactions : 8.229060985232781, Average Time : 0.12152054794520548

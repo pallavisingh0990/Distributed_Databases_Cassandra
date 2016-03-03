@@ -1,0 +1,278 @@
+D8 Table Structure:
+
+CREATE KEYSPACE TransTeam8 WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 2 };
+
+CREATE TABLE TransTeam8.MasterTable(
+    O_W_ID int,
+    O_D_ID int,
+    O_ID int,
+    OL_NUMBER int,
+    I_ID int,
+    C_FIRST varchar,
+    C_MIDDLE varchar,
+    C_LAST varchar,
+    I_NAME varchar,
+    OL_QUANTITY decimal,    
+    O_ENTRY_D timestamp,
+    PRIMARY KEY(O_W_ID, O_D_ID, O_ID)
+);
+
+CREATE TABLE TransTeam8.stocktable_newordertrans(
+    S_W_ID int,
+    S_I_ID int,
+    S_QUANTITY decimal,
+    S_YTD decimal,
+    S_ORDER_CNT int,
+    S_REMOTE_CNT int,
+    S_DIST_01 varchar,
+    S_DIST_02 varchar,
+    S_DIST_03 varchar,
+    S_DIST_04 varchar,
+    S_DIST_05 varchar,
+    S_DIST_06 varchar,
+    S_DIST_07 varchar,
+    S_DIST_08 varchar,
+    S_DIST_09 varchar,
+    S_DIST_10 varchar,
+    S_DATA varchar,
+    PRIMARY KEY(S_W_ID,S_I_ID)
+);
+
+CREATE TABLE TransTeam8.warehouse_paymenttrans(
+ W_ID int PRIMARY KEY,
+ W_NAME varchar,
+ W_STREET_1 varchar,
+ W_STREET_2 varchar,
+ W_CITY varchar,
+ W_STATE varchar,
+ W_ZIP varchar,
+ W_TAX decimal,
+ W_YTD decimal
+);
+
+CREATE TABLE TransTeam8.ORDERTABLE_DELIVERYTRANS(O_W_ID INT ,O_D_ID INT, O_ID INT,O_C_ID INT,O_CARRIER_ID INT,
+O_OL_CNT DECIMAL,O_ALL_LOCAL DECIMAL, O_ENTRY_D TIMESTAMP, PRIMARY KEY((O_W_ID,O_D_ID),O_ID));
+
+CREATE TABLE TransTeam8.ORDERLINETABLE_DELIVERYTRANS(OL_W_ID INT,OL_D_ID INT,OL_O_ID INT,OL_NUMBER INT,OL_I_ID INT,
+OL_DELIVERY_D TIMESTAMP,OL_AMOUNT DECIMAL,OL_SUPPLY_W_ID INT,OL_QUANTITY DECIMAL,OL_DIST_INFO VARCHAR,PRIMARY KEY(OL_O_ID,OL_W_ID,OL_D_ID,OL_I_ID));
+
+CREATE TABLE TransTeam8.DISTRICTTABLE_DELIVERYTRANS( D_W_ID INT ,D_ID INT, D_NAME VARCHAR,D_STREET_1 VARCHAR, D_STREET_2 VARCHAR, D_CITY VARCHAR, D_STATE VARCHAR, D_ZIP VARCHAR, D_TAX DECIMAL,D_YTD DECIMAL,D_NEXT_O_ID INT, PRIMARY KEY(D_W_ID,D_ID));
+
+CREATE TABLE TransTeam8.itemtable_poptrans(
+ I_ID int PRIMARY KEY,
+ I_NAME varchar,
+ I_PRICE decimal,
+ I_IM_ID int,
+ I_DATA varchar
+);
+
+CREATE TABLE TransTeam8.orderline_stocktrans(
+ OL_W_ID int,
+ OL_D_ID int,
+ OL_O_ID int,
+ OL_NUMBER int,
+ OL_I_ID int,
+ PRIMARY KEY((OL_W_ID,OL_D_ID),OL_O_ID,OL_NUMBER)      
+) WITH CLUSTERING ORDER BY (OL_O_ID DESC);
+
+CREATE TABLE TransTeam8.Stock_stocktrans(
+    S_W_ID int,
+    S_I_ID int,
+    S_QUANTITY decimal,
+    PRIMARY KEY(S_W_ID, S_I_ID,S_QUANTITY)
+);
+
+
+CREATE TABLE TransTeam8.CUSTOMERTABLE_DELIVERYTRANS( C_W_ID INT ,C_D_ID INT, C_ID INT , C_FIRST VARCHAR, C_MIDDLE VARCHAR, C_LAST VARCHAR,C_STREET_1 VARCHAR, C_STREET_2 VARCHAR, C_CITY VARCHAR, C_STATE VARCHAR, C_ZIP VARCHAR, C_PHONE VARCHAR,C_SINCE TIMESTAMP, C_CREDIT VARCHAR,C_CREDIT_LIM DECIMAL,C_DISCOUNT DECIMAL,C_BALANCE DECIMAL,C_YTD_PAYMENT FLOAT,
+C_PAYMENT_CNT INT, C_DELIVERY_CNT INT, C_DATA VARCHAR, PRIMARY KEY((C_ID,C_W_ID,C_D_ID)));
+
+CREATE TABLE TransTeam8.district_stocktrans(
+ D_W_ID int,
+ D_ID int,
+ D_NAME varchar,
+ D_STREET_1 varchar,
+ D_STREET_2 varchar,
+ D_CITY varchar,
+ D_STATE varchar,
+ D_ZIP varchar,
+ D_TAX decimal,
+ D_YTD decimal,
+ D_NEXT_O_ID int,
+ PRIMARY KEY(D_W_ID, D_ID)
+);
+
+CREATE TABLE TransTeam8.customers_paymenttrans(
+ C_W_ID int,
+ C_D_ID int,
+ C_ID int,
+ C_FIRST varchar,
+ C_MIDDLE varchar,
+ C_LAST varchar,
+ C_STREET_1 varchar,
+ C_STREET_2 varchar,
+ C_CITY varchar,
+ C_STATE varchar,
+ C_ZIP varchar,
+ C_PHONE varchar,
+ C_SINCE timestamp,
+ C_CREDIT varchar,
+ C_CREDIT_LIM decimal,
+ C_DISCOUNT decimal,
+ C_BALANCE decimal,
+ C_YTD_PAYMENT decimal,
+ C_PAYMENT_CNT int,
+ C_DELIVERY_CNT int,
+ C_DATA varchar,
+ PRIMARY KEY(C_W_ID,C_D_ID,C_ID)
+);
+
+CREATE TABLE TransTeam8.order_by_customer_id_orderstatustrans (
+    o_c_id int,
+    o_d_id int,
+    o_w_id int,
+    o_id int,
+    o_carrier_id int,
+    o_entry_d timestamp,
+    PRIMARY KEY ((o_c_id, o_d_id, o_w_id), o_id)
+);
+
+
+
+----------------------------------------------------------------------------------------------------------------------
+D40 Table Structure:
+
+CREATE KEYSPACE TransTeam40 WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 2 };
+
+CREATE TABLE Transteam40.MasterTable(
+       O_W_ID int,
+    O_D_ID int,
+    O_ID int,
+           OL_NUMBER int,
+           I_ID int,
+           C_FIRST varchar,
+    C_MIDDLE varchar,
+    C_LAST varchar,
+           I_NAME varchar,
+           OL_QUANTITY decimal,    
+    O_ENTRY_D timestamp,
+    PRIMARY KEY(O_W_ID, O_D_ID, O_ID)
+);
+
+CREATE TABLE Transteam40. stocktable_newordertrans(
+    S_W_ID int,
+    S_I_ID int,
+    S_QUANTITY decimal,
+    S_YTD decimal,
+    S_ORDER_CNT int,
+    S_REMOTE_CNT int,
+    S_DIST_01 varchar,
+    S_DIST_02 varchar,
+    S_DIST_03 varchar,
+    S_DIST_04 varchar,
+    S_DIST_05 varchar,
+    S_DIST_06 varchar,
+    S_DIST_07 varchar,
+    S_DIST_08 varchar,
+    S_DIST_09 varchar,
+    S_DIST_10 varchar,
+    S_DATA varchar,
+    PRIMARY KEY(S_W_ID,S_I_ID)
+);
+
+CREATE TABLE TransTeam40.warehouse_paymenttrans(
+ W_ID int PRIMARY KEY,
+ W_NAME varchar,
+ W_STREET_1 varchar,
+ W_STREET_2 varchar,
+ W_CITY varchar,
+ W_STATE varchar,
+ W_ZIP varchar,
+ W_TAX decimal,
+ W_YTD decimal
+);
+
+CREATE TABLE TransTeam40.ORDERTABLE_DELIVERYTRANS(O_W_ID INT ,O_D_ID INT, O_ID INT,O_C_ID INT,O_CARRIER_ID INT,
+O_OL_CNT DECIMAL,O_ALL_LOCAL DECIMAL, O_ENTRY_D TIMESTAMP, PRIMARY KEY((O_W_ID,O_D_ID),O_ID));
+
+CREATE TABLE TransTeam40.ORDERLINETABLE_DELIVERYTRANS(OL_W_ID INT,OL_D_ID INT,OL_O_ID INT,OL_NUMBER INT,OL_I_ID INT,
+OL_DELIVERY_D TIMESTAMP,OL_AMOUNT DECIMAL,OL_SUPPLY_W_ID INT,OL_QUANTITY DECIMAL,OL_DIST_INFO VARCHAR,PRIMARY KEY(OL_O_ID,OL_W_ID,OL_D_ID,OL_I_ID));
+
+CREATE TABLE TransTeam40.DISTRICTTABLE_DELIVERYTRANS( D_W_ID INT ,D_ID INT, D_NAME VARCHAR,D_STREET_1 VARCHAR, D_STREET_2 VARCHAR, D_CITY VARCHAR, D_STATE VARCHAR, D_ZIP VARCHAR, D_TAX DECIMAL,D_YTD DECIMAL,D_NEXT_O_ID INT, PRIMARY KEY(D_W_ID,D_ID));
+
+CREATE TABLE TransTeam40.itemtable_poptrans(
+ I_ID int PRIMARY KEY,
+ I_NAME varchar,
+ I_PRICE decimal,
+ I_IM_ID int,
+ I_DATA varchar
+);
+
+CREATE TABLE TransTeam40.orderline_stocktrans(
+ OL_W_ID int,
+ OL_D_ID int,
+ OL_O_ID int,
+ OL_NUMBER int,
+ OL_I_ID int,
+ PRIMARY KEY((OL_W_ID,OL_D_ID),OL_O_ID,OL_NUMBER)      
+) WITH CLUSTERING ORDER BY (OL_O_ID DESC);
+
+CREATE TABLE TransTeam40.Stock_stocktrans(
+    S_W_ID int,
+    S_I_ID int,
+    S_QUANTITY decimal,
+    PRIMARY KEY(S_W_ID, S_I_ID,S_QUANTITY)
+);
+
+
+CREATE TABLE TransTeam40.CUSTOMERTABLE_DELIVERYTRANS( C_W_ID INT ,C_D_ID INT, C_ID INT , C_FIRST VARCHAR, C_MIDDLE VARCHAR, C_LAST VARCHAR,C_STREET_1 VARCHAR, C_STREET_2 VARCHAR, C_CITY VARCHAR, C_STATE VARCHAR, C_ZIP VARCHAR, C_PHONE VARCHAR,C_SINCE TIMESTAMP, C_CREDIT VARCHAR,C_CREDIT_LIM DECIMAL,C_DISCOUNT DECIMAL,C_BALANCE DECIMAL,C_YTD_PAYMENT FLOAT,
+C_PAYMENT_CNT INT, C_DELIVERY_CNT INT, C_DATA VARCHAR, PRIMARY KEY((C_ID,C_W_ID,C_D_ID)));
+
+CREATE TABLE TransTeam40.district_stocktrans(
+ D_W_ID int,
+ D_ID int,
+ D_NAME varchar,
+ D_STREET_1 varchar,
+ D_STREET_2 varchar,
+ D_CITY varchar,
+ D_STATE varchar,
+ D_ZIP varchar,
+ D_TAX decimal,
+ D_YTD decimal,
+ D_NEXT_O_ID int,
+ PRIMARY KEY(D_W_ID, D_ID)
+);
+
+CREATE TABLE TransTeam40.customers_paymenttrans(
+ C_W_ID int,
+ C_D_ID int,
+ C_ID int,
+ C_FIRST varchar,
+ C_MIDDLE varchar,
+ C_LAST varchar,
+ C_STREET_1 varchar,
+ C_STREET_2 varchar,
+ C_CITY varchar,
+ C_STATE varchar,
+ C_ZIP varchar,
+ C_PHONE varchar,
+ C_SINCE timestamp,
+ C_CREDIT varchar,
+ C_CREDIT_LIM decimal,
+ C_DISCOUNT decimal,
+ C_BALANCE decimal,
+ C_YTD_PAYMENT decimal,
+ C_PAYMENT_CNT int,
+ C_DELIVERY_CNT int,
+ C_DATA varchar,
+ PRIMARY KEY(C_W_ID,C_D_ID,C_ID)
+);
+
+CREATE TABLE TransTeam8.order_by_customer_id_orderstatustrans (
+    o_c_id int,
+    o_d_id int,
+    o_w_id int,
+    o_id int,
+    o_carrier_id int,
+    o_entry_d timestamp,
+    PRIMARY KEY ((o_c_id, o_d_id, o_w_id), o_id)
+);

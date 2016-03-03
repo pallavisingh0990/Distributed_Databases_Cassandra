@@ -1,0 +1,33 @@
+log4j:WARN No appenders could be found for logger (com.datastax.driver.core.Cluster).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+
+
+Thread Id: T3 : is handling Transactions:105, and the Total Time is : 3.69sec, Average Time per Transactions  is : 28.45528455284553, Average Time is : 0.03514285714285714
+
+
+Thread Id: T7 : is handling Transactions:106, and the Total Time is : 3.746sec, Average Time per Transactions  is : 28.29684997330486, Average Time is : 0.03533962264150944
+
+
+Thread Id: T2 : is handling Transactions:104, and the Total Time is : 3.792sec, Average Time per Transactions  is : 27.426160337552744, Average Time is : 0.03646153846153846
+
+
+Thread Id: T9 : is handling Transactions:101, and the Total Time is : 4.049sec, Average Time per Transactions  is : 24.944430723635463, Average Time is : 0.04008910891089109
+
+
+Thread Id: T0 : is handling Transactions:97, and the Total Time is : 4.084sec, Average Time per Transactions  is : 23.751224289911853, Average Time is : 0.04210309278350515
+
+
+Thread Id: T5 : is handling Transactions:117, and the Total Time is : 4.098sec, Average Time per Transactions  is : 28.55051244509517, Average Time is : 0.03502564102564103
+
+
+Thread Id: T8 : is handling Transactions:92, and the Total Time is : 4.252sec, Average Time per Transactions  is : 21.636876763875826, Average Time is : 0.04621739130434782
+
+
+Thread Id: T4 : is handling Transactions:103, and the Total Time is : 4.29sec, Average Time per Transactions  is : 24.009324009324008, Average Time is : 0.0416504854368932
+
+
+Thread Id: T1 : is handling Transactions:113, and the Total Time is : 4.4sec, Average Time per Transactions  is : 25.68181818181818, Average Time is : 0.03893805309734514
+
+
+Thread Id: T6 : is handling Transactions:123, and the Total Time is : 4.448sec, Average Time per Transactions  is : 27.652877697841724, Average Time is : 0.03616260162601626
